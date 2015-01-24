@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Softball Stats</string>
+    <string name="select_date">Select Date</string>
+    <string name="at_bats">At Bats</string>
+    <string name="singles">Singles</string>
+    <string name="save">Save</string>
+    <string name="leagues">Leagues</string>
+    <string name="tournaments">Tournaments</string>
+    <string name="edit_game">Edit Game</string>
+    <string name="doubles">Doubles</string>
+    <string name="triples">Triples</string>
+    <string name="homeruns">Home Runs</string>
+    <string name="runs">Runs</string>
+    <string name="rbis">RBIs</string>
+    <string name="walks">Walks</string>
+    <string name="strikeouts">Strike Outs</string>
+    <string name="sacrifices">Sac</string>
+    <string name="reachonerror">ROE</string>
+    <string name="fielderschoice">FC</string>
+    <string name="add_tournament">Add Tournament</string>
+    <string name="add_team">Add Team</string>
+    <string name="menu_add_team">Add Team</string>
+    <string name="menu_add_league">Add League</string>
+    <string name="menu_add_tournament">Add Tourney</string>
+    <string name="menu_delete_team">Delete Team</string>
+    <string name="menu_add_game">Add Game</string>
+    <string name="add_league">Add League</string>
+    <string name="edit_league">Edit League</string>
+    <string name="delete_league">Delete League</string>
+    <string name="team_name">Team Name</string>
+    <string name="league_name">League Name</string>
+    <string name="description">Description</string>
+    <string name="tournament_name">Tournament Name</string>
+    <string name="blank"></string>
+    <string name="change_date">Change the Date</string>
+    <string name="view_games">View Games</string>
+    <string name="delete">Delete</string>
+    <string name="zero">0</string>
+    <string name="ab">AB</string>
+    <string name="one_base">1B</string>
+    <string name="two_base">2B</string>
+    <string name="three_base">3B</string>
+    <string name="hr">HR</string>
+    <string name="r">R</string>
+    <string name="rbi">RBI</string>
+    <string name="bb">BB</string>
+    <string name="so">SO</string>
+    <string name="sac">SAC</string>
+    <string name="roe">ROE</string>
+    <string name="fc">FC</string>
+    <string name="avg">AVG</string>
+    <string name="confirm">Confirm!</string>
+    <string name="delete_game_prompt">Do you wish to delete this game?</string>
+    <string name="delete_league_prompt">Do you wish to delete this league?</string>
+    <string name="delete_tournament_prompt">Do you wish to delete this tournament?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="backup_name">MyBackupAgent</string>
+	
+    <string name="action_settings">Settings</string>
+    <string name="action_search">Search</string>
+    
+    <string name="action_new_team">New Team</string>
+    <string name="action_new_game">New Game</string>
+    <string name="action_new_league">New League</string>
+    <string name="action_new_tourney">New Tourney</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_sync_data">Sync Data</string>
+    
+</resources>

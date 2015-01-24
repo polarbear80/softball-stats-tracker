@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="com.kramerweb.softballstats"
+      android:versionCode="15"
+      android:versionName="2.1.4">
+    <uses-sdk android:minSdkVersion="11" android:targetSdkVersion="16" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.READ_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SYNC_SETTINGS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    
+    <application android:icon="@drawable/icon" 
+        android:label="@string/app_name"
+        android:allowBackup="true"
+        android:backupAgent="MyBackupAgent"
+        android:restoreAnyVersion="true"
+        android:theme="@android:style/Theme.Holo.Light">
+        
+        <provider
+	        android:name="com.kramerweb.softballstats.StubProvider"
+	        android:authorities="com.kramerweb.softballstats.datasync.provider"
+	        android:exported="false"
+	        android:syncable="true"/>
+        
+	    <service android:name="com.kramerweb.softballstats.AuthenticatorService">
+	        <intent-filter>
+	            <action android:name="android.accounts.AccountAuthenticator"/>
+	        </intent-filter>
+	        <meta-data
+	            android:name="android.accounts.AccountAuthenticator"
+	            android:resource="@xml/authenticator" />
+	    </service>
+		
+	    <service 
+	        android:name="com.kramerweb.softballstats.SyncService" 
+	        android:exported="true" 
+	        android:process=":sync">
+            <intent-filter>
+                <action android:name="android.content.SyncAdapter"/>
+            </intent-filter>
+            <meta-data android:name="android.content.SyncAdapter" android:resource="@xml/syncadapter" />
+        </service>
+        
+        <activity android:name=".SoftballStats"
+                  android:label="@string/app_name">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AddTeam" />
+		<activity android:name=".AddLeague" />
+		<activity android:name=".AddTournament" />
+		<activity android:name=".ViewGames"
+		    android:parentActivityName="com.kramerweb.softballstats.Dashboard" >
+	        <!-- Parent activity meta-data to support 4.0 and lower -->
+	        <meta-data
+	            android:name="android.support.PARENT_ACTIVITY"
+	            android:value="com.kramerweb.softballstats.Dashboard" />
+	    </activity>
+		<activity android:name=".GameEdit" />
+		<activity android:name=".AddGame" />
+		<activity android:name=".GamesList" />
+		<activity android:name=".GamesListAdapter" />
+		<activity android:name=".Login" />
+		<activity android:name=".Register" />
+		<activity android:name=".Dashboard" />
+		<activity android:name="com.google.ads.AdActivity"
+		    android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"/>
+		<meta-data android:name="com.google.android.backup.api_key"
+    		android:value="AEdPqrEAAAAI2ZDB_5JJ0EKq3Ly7nUEoVkjQQO-TOaOp68gkZA" />
+    </application>
+</manifest>

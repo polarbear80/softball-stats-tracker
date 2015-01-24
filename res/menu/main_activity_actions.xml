@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Search, should appear as action button -->
+    <item android:id="@+id/action_new_team"
+          android:icon="@drawable/ic_action_addteam"
+          android:title="@string/action_new_team"
+          android:showAsAction="never" />
+    <item android:id="@+id/action_new_league"
+          android:icon="@drawable/ic_action_addleague"
+          android:title="@string/action_new_league"
+          android:showAsAction="never" />
+    <item android:id="@+id/action_new_tourney"
+          android:icon="@drawable/ic_action_addtourney"
+          android:title="@string/action_new_tourney"
+          android:showAsAction="never" />
+    <item android:id="@+id/action_sync_data"
+          android:icon="@drawable/ic_action_refresh"
+          android:title="@string/action_sync_data"
+          android:showAsAction="never" />
+    <!-- Settings, should always be in the overflow -->
+    <!-- <item android:id="@+id/action_settings"
+          android:title="@string/action_settings"
+          android:showAsAction="never" /> -->
+</menu>

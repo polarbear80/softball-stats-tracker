@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent">
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0">
+        <Spinner android:id="@+id/spYear" android:layout_height="wrap_content" android:layout_width="wrap_content"></Spinner>
+        <Spinner android:layout_weight="1" android:layout_width="225dp" android:id="@+id/spTeam" android:layout_height="wrap_content"></Spinner>
+    </LinearLayout>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" >
+    	<TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="500dp" android:id="@+id/tvLeagues" android:text="@string/leagues" android:layout_weight="0"></TextView>
+	</RelativeLayout>
+	<ListView android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/lvLeagues" android:layout_weight="0"></ListView>
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="horizontal" >
+		<TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceLarge" android:layout_width="wrap_content" android:id="@+id/tvTournaments" android:text="@string/tournaments" android:layout_weight="0"></TextView>
+	</RelativeLayout>
+	<ListView android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/lvTournaments" android:layout_weight="1"></ListView>
+	<ListView android:id="@android:id/list" android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_weight="0"></ListView>
+	<TableLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:id="@+id/tlStats" android:layout_weight="0">
+        <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/trStatsHeader" style="@style/HeaderRow">
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvHeaderAvg" android:text="@string/avg" android:layout_weight="1" android:gravity="center_horizontal" style="@style/HeaderText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvHeaderAb" android:text="@string/ab" android:layout_weight="1" android:gravity="center_horizontal" style="@style/HeaderText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvHeader1B" android:text="@string/one_base" android:layout_weight="1" android:gravity="center_horizontal" style="@style/HeaderText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvHeader2b" android:text="@string/two_base" android:layout_weight="1" android:gravity="center_horizontal" style="@style/HeaderText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvHeader3b" android:text="@string/three_base" android:layout_weight="1" android:gravity="center_horizontal" style="@style/HeaderText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvHeaderHr" android:text="@string/hr" android:layout_weight="1" android:gravity="center_horizontal" style="@style/HeaderText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvHeaderR" android:text="@string/r" android:layout_weight="1" android:gravity="center_horizontal" style="@style/HeaderText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvHeaderRbi" android:text="@string/rbi" android:layout_weight="1" android:gravity="center_horizontal" style="@style/HeaderText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvHeaderBb" android:text="@string/bb" android:layout_weight="1" android:gravity="center_horizontal" style="@style/HeaderText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvHeaderSo" android:text="@string/so" android:layout_weight="1" android:gravity="center_horizontal" style="@style/HeaderText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvHeaderSac" android:text="@string/sac" android:layout_weight="1" android:gravity="center_horizontal" style="@style/HeaderText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvHeaderFc" android:text="@string/fc" android:layout_weight="1" android:gravity="center_horizontal" style="@style/HeaderText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvHeaderRoe" android:text="@string/roe" android:layout_weight="1" android:gravity="center_horizontal" style="@style/HeaderText"></TextView>
+        </TableRow>
+        <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/trStatsData" style="@style/BodyRow">
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvAvg" android:text="@string/blank" android:layout_weight="1" android:gravity="center_horizontal" style="@style/BodyText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvAb" android:text="@string/blank" android:layout_weight="1" android:gravity="center_horizontal" style="@style/BodyText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tv1b" android:text="@string/blank" android:layout_weight="1" android:gravity="center_horizontal" style="@style/BodyText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tv2b" android:text="@string/blank" android:layout_weight="1" android:gravity="center_horizontal" style="@style/BodyText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tv3b" android:text="@string/blank" android:layout_weight="1" android:gravity="center_horizontal" style="@style/BodyText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvHr" android:text="@string/blank" android:layout_weight="1" android:gravity="center_horizontal" style="@style/BodyText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvR" android:text="@string/blank" android:layout_weight="1" android:gravity="center_horizontal" style="@style/BodyText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvRbi" android:text="@string/blank" android:layout_weight="1" android:gravity="center_horizontal" style="@style/BodyText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvBb" android:text="@string/blank" android:layout_weight="1" android:gravity="center_horizontal" style="@style/BodyText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvSo" android:text="@string/blank" android:layout_weight="1" android:gravity="center_horizontal" style="@style/BodyText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvSac" android:text="@string/blank" android:layout_weight="1" android:gravity="center_horizontal" style="@style/BodyText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvFc" android:text="@string/blank" android:layout_weight="1" android:gravity="center_horizontal" style="@style/BodyText"></TextView>
+            <TextView android:layout_height="wrap_content" android:textAppearance="?android:attr/textAppearanceSmall" android:layout_width="wrap_content" android:id="@+id/tvRoe" android:text="@string/blank" android:layout_weight="1" android:gravity="center_horizontal" style="@style/BodyText"></TextView>
+        </TableRow>
+    </TableLayout>
+    <LinearLayout android:id="@+id/adLayout" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0">
+		<com.google.ads.AdView
+		    xmlns:ads="http://schemas.android.com/apk/lib/com.google.ads"
+		    android:id="@+id/adView"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    ads:adSize="BANNER"
+		    ads:adUnitId="a150df3fbd678ad"
+		    ads:testDevices="TEST_EMULATOR, 9E30A665C78044AC3FF52292BE93E8D1"
+		/>
+    </LinearLayout>
+</LinearLayout>
